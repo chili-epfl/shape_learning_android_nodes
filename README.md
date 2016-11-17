@@ -19,3 +19,11 @@ A pre-compiled apk file is provided, but for compilation from source the [ROS fo
 Note: Shapes are published as `nav_msgs/Path` messages, with the xy origin at the bottom left. If the message is a display request (as opposed to a user-drawn shape), the time stamp in the header indicates the desired start time of the message, and the time stamp of the individual points indicates the time, relative to the start time, that the point should be displayed. If the sequence ID for a point is 1, that point is considered as bein on a "pen-up" segment, and the line to that point will not be displayed.
 
 Note: By default, the system waits until the time requested in the message header before animating the shape (to synchronise with other devices such as a robot writing), but this may be modified by specifying the `wait_to_sync_traj` ROS param value. 
+
+### TODO
+- correct letter alignments for non cursive letters and letters that don't start at the bottom left of the box
+- correct letter spacing by taking into account the user spacing
+- manage both cursive and non cursive letters be able to set a mode on the app
+- manage other letters (accentuated, capitals etc..)
+- remobe image background (put a plain white background)
+- allow other stylet utilisation by drawing manager (capacitive stylet).
